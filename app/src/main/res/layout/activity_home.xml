@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlackSoft"
+    tools:context=".HomeActivity">
+
+    <EditText
+        android:id="@+id/editTextSayı1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorGray"
+        android:ems="10"
+        android:hint="1. Sayı"
+        android:inputType="numberDecimal"
+        android:paddingVertical="10dp"
+        android:paddingLeft="12dp"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorBlackSoft"
+
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSonuc" />
+
+    <EditText
+        android:id="@+id/editTextSayı2"
+        android:textColor="@color/colorWhite"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@color/colorGray"
+        android:ems="10"
+        android:hint="2. Sayı"
+        android:paddingLeft="12dp"
+        android:inputType="numberDecimal"
+        android:paddingVertical="10dp"
+        android:textColorHint="@color/colorBlackSoft"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSayı1" />
+
+    <Button
+        android:id="@+id/buttonTopla"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/colorOrange"
+        android:text="+"
+        android:textColor="@color/colorWhite"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCarpma"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCıkarma"
+        app:layout_constraintStart_toStartOf="@+id/editTextSayı2" />
+
+    <Button
+        android:id="@+id/buttonCıkarma"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/colorOrange"
+        android:text="-"
+        android:textColor="@color/colorWhite"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBolum"
+        app:layout_constraintEnd_toEndOf="@+id/editTextSayı2"
+        app:layout_constraintStart_toEndOf="@+id/buttonTopla" />
+
+    <Button
+        android:id="@+id/buttonBolum"
+        android:textSize="50sp"
+        android:background="@color/colorOrange"
+        android:textColor="@color/colorWhite"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:text="½"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCıkarma"
+        app:layout_constraintStart_toEndOf="@+id/buttonCarpma" />
+
+    <Button
+        android:id="@+id/buttonCarpma"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="4dp"
+        android:background="@color/colorOrange"
+        android:text="x"
+        android:textColor="@color/colorWhite"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonBolum"
+        app:layout_constraintStart_toStartOf="@+id/buttonTopla" />
+
+    <TextView
+        android:id="@+id/textViewSonuc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBlackSoft"
+        android:paddingLeft="10dp"
+        android:paddingTop="50dp"
+        android:paddingBottom="10dp"
+        android:text="="
+        android:textColor="@color/colorWhite"
+        android:textSize="36sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
